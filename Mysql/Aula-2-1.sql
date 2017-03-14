@@ -16,7 +16,7 @@ create table tb_clientes(
 
 );
 
-create table pedidos(
+create table tb_pedidos(
 	ped_codigo int auto_increment primary key,
     ped_data date not null,
     ped_finalizado int not null,
