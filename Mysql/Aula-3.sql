@@ -8,7 +8,7 @@ create table TB_CURSOS(
 
 );
 
-create table TB_alunos(
+create table TB_ALUNOS(
     ALU_CODIGO int not null primary key,
     ALU_NOME varchar(50) not null,
     ALU_TELEFONE varchar(15) not null,
@@ -16,7 +16,7 @@ create table TB_alunos(
 
 );
 
-create table TB_turmas(
+create table TB_TURMAS(
     TUR_CODIGO int not null primary key,
     TUR_NOME varchar(50),
     TUR_CUR_CODIGO int references TB_CURSOS(CUR_CODIGO),
