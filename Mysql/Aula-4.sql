@@ -1,32 +1,32 @@
-create database db_pizzaria;
-use db_pizzaria;
+create database DB_PIZZARIA;
+use DB_PIZZARIA;
 
 -- Criando a tabela Pizzas
-create table tb_pizzas(
-    piz_codigo int auto_increment primary key,
-    piz_sabor varchar(50) not null,
-    piz_tamanho varchar(2) not null,
-    piz_preco decimal(8,2) not null
+create table TB_PIZZAS(
+    PIZ_CODIGO int auto_increment primary key,
+    PIZ_SABOR varchar(50) not null,
+    PIZ_TAMANHO varchar(2) not null,
+    PIZ_PRECO decimal(8,2) not null
 
 );
 
 -- Criando tabela Clientes
-create table tb_clientes(
-    cli_codigo int auto_increment primary key,
-    cli_nome varchar(50) not null,
-    cli_mesa varchar(50) not null
+create table TB_CLIENTES(
+    CLI_CODIGO int auto_increment primary key,
+    CLI_NOME varchar(50) not null,
+    CLI_MESA varchar(50) not null
 
 );
 
 -- Criando a tabela Pedidos
-create table tb_pedidos(
-    ped_codigo int auto_increment primary key,
-    ped_data date not null,
-    ped_finalizado int not null,
-    ped_cli_codigo int,
-    ped_piz_codigo int,
-    foreign key	(ped_cli_codigo)references tb_clientes(cli_codigo),
-    foreign key (ped_piz_codigo)references tb_pizzas(piz_codigo)
+create table TB_PEDIDOS(
+    PED_CODIGO int auto_increment primary key,
+    PED_DATA date not null,
+    PED_FINALIZADO int not null,
+    PED_CLI_CODIGO int,
+    PED_PIZ_CODIGO int,
+    foreign key	(PED_CLI_CODIGO)references TB_CLIENTES(CLI_CODIGO),
+    foreign key (PED_PIZ_CODIGO)references TB_PIZZAS(PIZ_CODIGO)
 );
 
 -- Inserindo valores na tabela Pizza
@@ -38,7 +38,7 @@ colocamos o código da  pizza como auto_increment. Como vamos
 colocar os dados na seguencia dos campo podemos omitir  os
 campos depois de "values" e no local do código da pizza colocamos "default".
 */
- insert into  tb_pizzas values
+ insert into  TB_PIZZAS values
  (default,'Franco','G', 20.00),
  (default,'Ovo','M', 10.00),
  (default,'Queijo','P', 5.00),
@@ -47,7 +47,7 @@ campos depois de "values" e no local do código da pizza colocamos "default".
 
 
  -- Inserindo valores na tabela Clientes
- insert into tb_clientes values
+ insert into TB_CLIENTES values
  (default,'Luis', 2),
  (default,'Carlos', 6),
  (default,'Joao', 8),
@@ -55,7 +55,7 @@ campos depois de "values" e no local do código da pizza colocamos "default".
  (default,'Chico', 4);
 
  -- Inserindo valores na tebela Pedidos
- insert into tb_pedidos values
+ insert into TB_PEDIDOS values
  (default,'2017-05-24', 0 , 1, 1),
  (default,'2015-01-28', 0 , 2, 2),
  (default,'2013-09-11', 0 , 3, 3),
