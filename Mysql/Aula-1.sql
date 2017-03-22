@@ -1,16 +1,16 @@
-create database db_locadora;
+create database DB_LOCADORA;  
 
-use db_locadora;
+use DB_LOCADORA;
 
-create table tb_filmes(
-  fil_nome varchar(50),
-  fil_codigo int auto_increment primary key,
-  fil_ano int
+create table TB_FILMES(
+  FIL_NOME varchar(50),
+  FIL_CODIGO int auto_increment primary key,
+  FIL_ANO int
 );
 
-create table tb_locacao(
-  loc_codigo int auto_increment primary key,
-  loc_tb_filmes int,
-  foreign key (loc_tb_filmes) references tb_filmes(fil_codigo)
+create table TB_COLCACOES(
+  LOC_CODIGO int auto_increment primary key,
+  LOC_TB_FILMES int,
+  foreign key (LOC_TB_FILMES) references TB_FILMESs(FIL_CODIGO)
 );
 
