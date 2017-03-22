@@ -1,24 +1,24 @@
-create database db_cursos;
+create database DB_CURSOS;
 use db_cursos;
 
-create table tb_cursos(
-    cur_codigo int not null primary key,
-    cur_nome varchar(50) not null,
-    cur_carga_horaria int not null
+create table TB_CURSOS(
+    CUR_CODIGO int not null primary key,
+    CUR_NOME varchar(50) not null,
+    CUR_CARGA_HORARIA int not null
 
 );
 
-create table tb_alunos(
-    alu_codigo int not null primary key,
-    alu_nome varchar(50) not null,
-    alu_telefone varchar(15) not null,
-    alu_email varchar(50)
+create table TB_alunos(
+    ALU_CODIGO int not null primary key,
+    ALU_NOME varchar(50) not null,
+    ALU_TELEFONE varchar(15) not null,
+    ALU_EMAIL varchar(50)
 
 );
 
-create table tb_turmas(
-    tur_codigo int not null primary key,
-    tur_nome varchar(50),
-    tur_cur_codigo int references tb_cursos(cur_codigo),
-    tur_alu_codigo int references tb_alunos(alu_codigo)
+create table TB_turmas(
+    TUR_CODIGO int not null primary key,
+    TUR_NOME varchar(50),
+    TUR_CUR_CODIGO int references TB_CURSOS(CUR_CODIGO),
+    TUR_ALU_CODIGO int references TB_ALUNOS(ALU_CODIGO)
 );
