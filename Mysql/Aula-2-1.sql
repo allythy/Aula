@@ -1,27 +1,26 @@
-create database db_pizzaria;
-use db_pizzaria;
+create database DB_PIZZARIA;
+use DB_PIZZARIA;
 
-create table tb_pizzas(
-    piz_codigo int auto_increment primary key,
-    piz_sabor varchar(50) not null,
-    piz_tamanho varchar(2) not null,
-    piz_preco decimal(8,2) not null
-
-);
-
-create table tb_clientes(
-    cli_codigo int auto_increment primary key,
-    cli_nome varchar(50) not null,
-    cli_mesa varchar(50) not null
+create table TB_PIZZAS(
+    PIZ_CODIGO int auto_increment primary key,
+    PIZ_SABOR varchar(50) not null,
+    PIZ_TAMANHO varchar(2) not null,
+    PIZ_PRECO decimal(8,2) not null
 
 );
 
-create table tb_pedidos(
-    ped_codigo int auto_increment primary key,
-    ped_data date not null,
-    ped_finalizado int not null,
-    ped_cli_codigo int,
-    ped_piz_codigo int,
-    foreign key	(ped_cli_codigo)references tb_clientes(cli_codigo),
-    foreign key (ped_piz_codigo)references tb_pizzas(piz_codigo)
+create table TB_CLIENTES(
+    CLI_CODIGO int auto_increment primary key,
+    CLI_NOME varchar(50) not null,
+    CLI_MESA varchar(50) not null
+
+);
+
+create table TB_PEDIDOS(
+    PED_CODIGO int auto_increment primary key,
+    PED_DATA date not null,
+    PED_CLI_CODIGO int,
+    PED_PIZ_CODIGO int,
+    foreign key	(PED_CLI_CODIGO)references TB_CLIENTES(CLI_CODIGO),
+    foreign key (PED_PIZ_CODIGO )references TB_PIZZAS(PIZ_CODIGO)
 );
