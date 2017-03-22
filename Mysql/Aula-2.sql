@@ -1,25 +1,25 @@
-create database db_loja;
+create database DB_LOJA;
 
-use db_loja;
+use DB_LOJA;
 
-create table tb_marcas(
-  mar_codigo int auto_increment primary key,
-  mar_marca varchar(50) not null
+create table TB_MARCAS(
+  MAR_CODIGO int auto_increment primary key,
+  MAR_MARCA varchar(50) not null
+);
+             
+create table TB_ESTADOS_CONSERVACAO(
+  EST_CODIGO int auto_increment primary key,
+  EST_ESTADO varchar(50) not null
 );
 
-create table tb_estados_conserv(
-  est_codigo int auto_increment primary key,
-  est_estado varchar(50) not null
-);
-
-create table tb_carros(
-  car_codigo int auto_increment primary key,
-  car_placa varchar(8) not null,
-  car_ano int not null,
-  car_est_codigo int not null,
-  car_mar_codigo int not null,
-  foreign key (car_est_codigo) references tb_estados_conserv(est_codigo),
-  foreign key (car_mar_codigo) references tb_marcas(mar_codigo)
+create table TB_CARROS(
+  CAR_CODIGO int auto_increment primary key,
+  CAR_PLACA varchar(8) not null,
+  CAR_ANO int not null,
+  CAR_EST_CODIGO int not null,
+  CAR_MAR_CODIGO int not null,
+  foreign key (CAR_EST_CODIGO) references TB_ESTADOS_CONSERVACAO(EST_CODIGO),
+  foreign key (CAR_MAR_CODIGO) references TB_MARCAS(MAR_CODIGO)
 
 );
 
