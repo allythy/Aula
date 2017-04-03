@@ -1,14 +1,13 @@
-
 package ciclico;
-
 
 public class Ciclico {
 
-    
-    public static void main(String[] args) {
-       int hora = 0, minuto = 0, segundo = 0;   
-        
-       do {    //hora
+    static Thread espere = new Thread();
+
+    public static void main(String[] args) throws InterruptedException {
+        int hora = 0, minuto = 0, segundo = 0;
+
+        do {    //hora
             do {     //minuto
                 do {     // segundos
                     if (hora < 10) {
@@ -25,15 +24,20 @@ public class Ciclico {
                     }
                     System.out.print(segundo + "\n");
                     segundo++;
+                    Thread.sleep(1000); // vai esperar 1s
+
                 } while (segundo <= 59);
                 segundo = 0;
                 minuto++;
+
             } while (minuto <= 59);
 
             segundo = 0;
             minuto = 0;
             hora++;
+
         } while (hora == 1);
     }
-    
+
 }
+
