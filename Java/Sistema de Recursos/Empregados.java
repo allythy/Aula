@@ -1,4 +1,3 @@
-
 package sistemarecuros;
 
 public abstract class Empregados {

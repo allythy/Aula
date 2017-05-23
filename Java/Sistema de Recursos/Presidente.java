@@ -1,4 +1,3 @@
-
 package sistemarecuros;
 
 public class Presidente extends Empregados{

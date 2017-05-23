@@ -1,4 +1,3 @@
-
 package sistemarecuros;
 
 public class Gerente extends Empregados{
@@ -44,7 +43,5 @@ public class Gerente extends Empregados{
     }
     
     
-
-    
-    
+  
 }

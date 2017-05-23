@@ -1,4 +1,3 @@
-
 package sistemarecuros;
 
 public class Engenheiro extends Empregados{
@@ -6,11 +5,10 @@ public class Engenheiro extends Empregados{
     private String crea;
     private double salarioEngenheiro;
 
-    public Engenheiro(String departamento, String crea, double salarioEngenheiro, String nome, String codigo, double salarioBase) {
+    public Engenheiro(String departamento, String crea, String nome, String codigo, double salarioBase) {
         super(nome, codigo, salarioBase);
         this.departamento = departamento;
         this.crea = crea;
-        this.salarioEngenheiro = salarioEngenheiro;
         calcularSalario();
     }
     
@@ -43,7 +41,6 @@ public class Engenheiro extends Empregados{
     public void setCrea(String crea) {
         this.crea = crea;
     }
-    
-    
+  
     
 }
