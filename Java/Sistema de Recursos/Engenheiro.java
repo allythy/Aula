@@ -1,4 +1,4 @@
-package sistemarecuros;
+package sistemarecursos;
 
 public class Engenheiro extends Empregados{
     private String departamento;

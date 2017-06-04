@@ -1,4 +1,4 @@
-package sistemarecuros;
+package sistemarecursos;
 
 public abstract class Empregados {
     

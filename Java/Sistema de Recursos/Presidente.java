@@ -1,11 +1,11 @@
-package sistemarecuros;
+package sistemarecursos;
 
 public class Presidente extends Empregados{
     private double valorCota;
     private double salarioPresidente;
     
 
-    public Presidente(double valorCota, double salarioPresidente, String nome, String codigo, double salarioBase) {
+    public Presidente(double valorCota, String nome, String codigo, double salarioBase) {
         super(nome, codigo, salarioBase);
         this.valorCota = valorCota;
         this.salarioPresidente = salarioPresidente;
