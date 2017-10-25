@@ -1,0 +1,37 @@
+01 - Efetue um algoritmo PHP que receba os valores A, B, C e D. Efetue a soma entre A e C, a multiplicação entre B e D e verifique se o resultado da soma é maior, menor ou igual ao da multiplicação. Imprima: "A+C é maior que B+D", "A+C é menor que B+D", "A+C é igual a B+D”.
+
+————————————————————— 
+
+02 - Efetue um algorítmo PHP que receba quatro notas de um aluno, calcule e imprima a média aritmética das notas e a mensagem de aprovado para média superior ou igual a 7.0 ou a mensagem de reprovado para média inferior a 7.0.
+
+————————————————————— 
+
+03 - Efetue um algorítmo PHP que receba a altura e o sexo de uma pessoa, calcule e imprima o seu peso ideal, utilizando as seguintes fórmulas:
+
+• para homens: (72.7 * H) - 58
+• para mulheres: (62.1 * H) – 44.7
+
+————————————————————— 
+
+04 - Efetue um algoritmo em PHP que receba um valor qualquer e imprima os valores de 0 até o valor recebido, exemplo:
+
+• Valor recebido = 9
+• Impressão do programa – 0 1 2 3 4 5 6 7 8 9
+
+————————————————————— 
+
+05 - Efetue um algorítmo PHP que receba dois valores quaisquer e imprime todos os valores intermediários a ele, veja exemplo:
+
+Primeiro Valor = 5
+Segundo Valor = 15
+
+Imprime: 6 7 8 9 10 11 12 13 14
+
+————————————————————— 
+
+06 - Efetue um algorítmo PHP que receba uma string, encontre o número total de caracteres desta e imprima todos os números que existem entre o e o número total, exemplo:
+
+string = “Henrique Eduardo”
+total_caracter = 22
+
+Imprime: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
